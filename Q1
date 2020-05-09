@@ -17,9 +17,7 @@ Independent Variable(s)
 Dependent Variable
   FLUSHOT6 (binary categorical)
 
-
 ```{r setup}
-
 # get and set working directory
 getwd()
 setwd("/Volumes/Samsung USB/Health Data Analytics/Final Project")
@@ -54,7 +52,6 @@ summary(BRFSS$flushot6 == 2 & BRFSS$flushot6 == 7 & BRFSS$flushot6 == 9)
 # Logistic Regression
 
 ```{r}
-
 # conduct logistic regression
 REGRESS <- glm(flushot6 ~ drvisits + factor(x.urbstat)+ factor(x.race), data = BRFSS, family = "binomial")
 
